@@ -45,6 +45,7 @@ class Master:
      self.genres = []
      self.styles = []
      self.images = []
+     self.videos = []
      self.anv = '' #used only if artist name is missing
      self.artist = ''
      self.artists = [] #join
@@ -112,6 +113,14 @@ class ImageInfo:
     self.uri = ''    
     self.uri150 = '' 
     self.width = 0   
+
+class VideoInfo:
+  def __init__(self):
+    self.duration = 0
+    self.embed = True
+    self.uri = ''
+    self.title = ''
+    self.description = ''
 
 class ImageType:
   PRIMARY = 0
