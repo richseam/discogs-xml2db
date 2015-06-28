@@ -167,7 +167,7 @@ class MongoDbExporter(object):
 			if db_name.startswith('/'):
 				db_name = db_name[1:]
 			#print 'Connecting to db %s on %s with options.' % (db_name, mongo_uri, options)
-			mongo = pymongo.Connection(mongo_uri)
+			mongo = pymongo.MongoClient(mongo_uri)
 			self.db = mongo[db_name]
 			if 'uniq' in self._options and 'md5' in self._options['uniq']:
 				self._quick_uniq = False
