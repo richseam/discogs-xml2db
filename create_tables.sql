@@ -201,6 +201,14 @@ CREATE UNLOGGED TABLE masters_images (
     image_uri text
 );
 
+CREATE UNLOGGED TABLE masters_videos (
+    master_id     integer,
+    title 		    text,
+    description 	text,    
+    embed 			boolean,
+    uri  text
+);
+
 REVOKE ALL ON SCHEMA public FROM PUBLIC;
 REVOKE ALL ON SCHEMA public FROM postgres;
 GRANT ALL ON SCHEMA public TO postgres;
